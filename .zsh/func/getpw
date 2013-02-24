@@ -1,0 +1,4 @@
+getpw () {
+  local token="${1}" && shift
+  security 2>&1 >/dev/null find-generic-password -gs ${token} | ruby -e 'print $1 if STDIN.gets =~ /^password: "(.*)"$/' | tee /dev/stderr | pbcopy
+}
