@@ -7,29 +7,37 @@ endif
 
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
+Bundle 'gmarik/vundle'
+
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
-Bundle 'gmarik/vundle'
+" github
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'tpope/vim-rails.git'
-Bundle 'vim-ruby/vim-ruby.git'
-Bundle 'mattn/gist-vim.git'
-Bundle 'tomtom/tcomment_vim.git'
-Bundle 'Lokaltog/powerline.git'
-Bundle 'altercation/vim-colors-solarized.git'
-Bundle 'tpope/vim-eunuch.git'
-Bundle 'scrooloose/nerdtree.git'
-Bundle 'jnwhiteh/vim-golang.git'
+Bundle 'tpope/vim-rails'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'mattn/gist-vim'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'Lokaltog/powerline'
+Bundle 'tpope/vim-eunuch'
+Bundle 'scrooloose/nerdtree'
+Bundle 'jnwhiteh/vim-golang'
+Bundle 'rking/ag.vim'
+Bundle 'Arkham/vim-tango'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'corntrace/bufexplorer'
+Bundle 'helino/vim-json'
+
+" vim-scripts
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 
 syntax enable
-let g:solarized_termtrans = 1
-colorscheme solarized
+colorscheme tango
 if has('gui_running')
-  set guifont=Inconsolata\ for\ Powerline:h14
   set background=dark
+  set guifont=Source\ Code\ Pro\ for\ Powerline:h12
   autocmd VimEnter * NERDTree
   autocmd VimEnter * wincmd p
   autocmd BufEnter * cd %:p:h
@@ -53,6 +61,8 @@ set expandtab
 
 set smartindent
 set autoindent
+set foldenable
+set scrolloff=4
 
 set laststatus=2
 set linespace=3
@@ -66,12 +76,16 @@ set ignorecase
 set incsearch
 set smartcase
 
-nnoremap <leader>q gqip
-
-set foldenable
-map ,c <c-_><c-_>
-
-set clipboard=unnamed
-noremap <leader>y "+y
-noremap <leader>yy "+yy
+" map      - all recursive
+" nmap     - normal recursive
+" vmap     - visual recursive
+" noremap  - all non-recursive
+" nnoremap - normal non-recursive
+" vnoremap - visual non-recursive
+map <leader>c <c-_><c-_>
+map <leader>q gqip
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
+
+" set clipboard=unnamed
+" noremap <leader>y "+y
+" noremap <leader>yy "+yy
