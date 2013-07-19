@@ -35,15 +35,16 @@ Bundle 'FuzzyFinder'
 
 syntax enable
 colorscheme tango
+set background=dark
 if has('gui_running')
-  set background=dark
+  set antialias
+  set autoread
+  set gcr=a:blinkwait0
   set guifont=Source\ Code\ Pro\ for\ Powerline:h12
+  set visualbell
   autocmd VimEnter * NERDTree
   autocmd VimEnter * wincmd p
   autocmd BufEnter * cd %:p:h
-else
-  set background=dark
-  set mouse=a
 endif
 let g:Powerline_symbols = 'fancy'
 
