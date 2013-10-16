@@ -28,6 +28,8 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'corntrace/bufexplorer'
 Bundle 'helino/vim-json'
+Bundle 'scrooloose/syntastic'
+Bundle 'godlygeek/tabular'
 
 " vim-scripts
 Bundle 'L9'
